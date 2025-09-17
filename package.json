@@ -7,7 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "tokens:split": "node ./scripts/split-tokens.mjs"
+    "tokens:split": "node ./scripts/split-tokens.mjs",
+    "build:tokens:tailwind": "node sd-tokens-config.js && node tw-tokens-config.js"
   },
   "dependencies": {
     "next": "15.5.3",

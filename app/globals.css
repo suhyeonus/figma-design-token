@@ -7,13 +7,14 @@
 
 @theme inline {
 
+
 /* AUTO-GENERATED COLORS START */
   --color-black: #000000;
   --color-blue-100: #ebf8ff;
   --color-blue-200: #bee3f8;
   --color-blue-300: #90cdf4;
   --color-blue-400: #63b3ed;
-  --color-blue-500: #fac7ff;
+  --color-blue-500: #4299e1;
   --color-blue-600: #3182ce;
   --color-blue-700: #2b6cb0;
   --color-blue-800: #2c5282;
@@ -102,6 +103,7 @@
   --color-yellow-800: #975a16;
   --color-yellow-900: #744210;
 /* AUTO-GENERATED COLORS END */
+
 
 
   --color-background: var(--background);

@@ -1838,12 +1838,12 @@
       "500": {
         "key": "{colors.blue.500}",
         "$type": "color",
-        "$value": "#fac7ff",
+        "$value": "#4299e1",
         "filePath": "tokens/flatten/global-token.json",
         "isSource": true,
         "original": {
           "$type": "color",
-          "$value": "#fac7ff",
+          "$value": "#4299e1",
           "key": "{colors.blue.500}"
         },
         "name": "colors-blue-500",

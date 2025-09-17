@@ -460,6 +460,12 @@
           "$type": "color",
           "$value": "#702459"
         }
+      },
+      "test": {
+        "1": {
+          "$type": "color",
+          "$value": "#fae8ff"
+        }
       }
     },
     "opacity": {

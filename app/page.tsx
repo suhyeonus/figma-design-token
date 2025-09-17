@@ -16,6 +16,7 @@ export default function Home() {
             <div className="w-[48px] h-[48px] rounded-lg bg-white border border-gray-300" />
             <div className="w-[48px] h-[48px] rounded-lg bg-blue-500" />
             <div className="w-[48px] h-[48px] rounded-lg bg-green-500" />
+            <div className="w-[48px] h-[48px] rounded-lg bg-test-1" />
           </div>
         </div>
 

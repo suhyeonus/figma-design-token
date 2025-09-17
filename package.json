@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "tokens:split": "node ./scripts/split-tokens.mjs",
-    "build:tokens:tailwind": "node sd-tokens-config.js && node tw-tokens-config.js"
+    "build:tokens:tailwind": "node sd-tokens-config.js && node tw-tokens-config.js",
+    "theme:generate": "node ./scripts/generate-theme-from-tailwind.mjs"
   },
   "dependencies": {
     "next": "15.5.3",

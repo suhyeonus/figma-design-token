@@ -13,7 +13,7 @@ const sd = new StyleDictionary({
       buildPath: 'tokens',
       files: [
         {
-          destination: 'tokens.json',
+          destination: 'sd-tokens.json',
           format: 'json',
         },
       ],

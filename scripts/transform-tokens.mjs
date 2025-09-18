@@ -42,7 +42,7 @@ async function splitTokens() {
 
   for (const key of topLevelKeys) {
     const subset = json[key];
-    const fileName = `${key}-token.json`;
+    const fileName = `${key}-tokens.json`;
     const filePath = path.join(outputDir, fileName);
     await writeJsonFile(filePath, subset);
     console.log(`Wrote ${path.relative(projectRoot, filePath)}`);

@@ -1,142 +1,191 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
-import { createRequire } from 'node:module';
-import { pathToFileURL } from 'node:url';
-import os from 'node:os';
 
 const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const tailwindConfigPath = path.resolve(projectRoot, 'tailwind.config.ts');
 const globalsCssPath = path.resolve(projectRoot, 'app', 'globals.css');
+const globalTokensPath = path.resolve(projectRoot, 'tokens', 'transformed', 'global-tokens.json');
+const darkTokensPath = path.resolve(projectRoot, 'tokens', 'transformed', 'dark-tokens.json');
 
-async function readTailwindConfigColors() {
-  if (!fs.existsSync(tailwindConfigPath)) {
-    throw new Error(`Cannot find tailwind.config.ts at ${tailwindConfigPath}`);
-  }
-  
-  let config;
+function readJsonSafe(filePath) {
   try {
-    const source = fs.readFileSync(tailwindConfigPath, 'utf8');
-    
-    const jsSource = source
-      .replace(/\/\*\* @type \{import\('tailwindcss'\)\.Config\} \*\//g, '')
-      .replace(/import type { Config } from 'tailwindcss';/g, '')
-      .replace(/const config: Config = {/g, 'const config = {')
-      .replace(/export default config;/g, 'module.exports = config;');
-      
-    const tempPath = path.join(os.tmpdir(), `tailwind.config.${Date.now()}.cjs`);
-    fs.writeFileSync(tempPath, jsSource, 'utf8');
-    
-    try {
-      const require = createRequire(import.meta.url);
-      config = require(tempPath);
-    } finally {
-      try { fs.unlinkSync(tempPath); } catch {}
-    }
+    if (!fs.existsSync(filePath)) return {};
+    const raw = fs.readFileSync(filePath, 'utf8');
+    return raw ? JSON.parse(raw) : {};
   } catch (e) {
-    console.error('Error reading tailwind config:', e.message);
-    throw new Error(`Failed to read tailwind.config.ts: ${e.message}`);
-  }
-  
-  const colors = config?.theme?.extend?.colors;
-  if (!colors || typeof colors !== 'object') {
-    console.warn('No colors found in tailwind config theme.extend.colors');
     return {};
   }
-  return colors;
 }
 
-function flattenColorsToCssVars(prefix, obj) {
-  const result = {};
-  function walk(currentKeyParts, value) {
-    if (value && typeof value === 'object' && !Array.isArray(value)) {
-      for (const [k, v] of Object.entries(value)) {
-        walk([...currentKeyParts, String(k)], v);
-      }
-    } else if (typeof value === 'string') {
-      const varName = `--color-${currentKeyParts.join('-')}`;
-      result[varName] = value;
+function isTokenLeaf(node) {
+  return node && typeof node === 'object' && 'value' in node && Object.keys(node).every((k) => ['value', 'type', 'description'].includes(k));
+}
+
+function flattenTokensToCssVars(obj, options = {}) {
+  const { prefix = '', excludeKeys = new Set(['$metadata', '$themes']) } = options;
+  const vars = {};
+  function walk(node, pathParts) {
+    if (!node || typeof node !== 'object') return;
+
+    if (isTokenLeaf(node)) {
+      const varName = `--${[...pathParts].join('-')}`;
+      vars[varName] = String(node.value);
+      return;
+    }
+
+    for (const [key, value] of Object.entries(node)) {
+      if (excludeKeys.has(key)) continue;
+      walk(value, [...pathParts, key]);
     }
   }
-  walk([prefix].filter(Boolean), obj);
-  return result;
+  walk(obj, prefix ? [prefix] : []);
+  return vars;
 }
 
-function generateCssVarsBlock(vars) {
-  const lines = Object.entries(vars)
+function buildVarsBlock(varsMap) {
+  return Object.entries(varsMap)
     .sort(([a], [b]) => a.localeCompare(b))
-    .map(([name, val]) => `  ${name}: ${val};`);
-  return lines.join('\n');
+    .map(([name, val]) => `    ${name}: ${val};`)
+    .join('\n');
 }
 
-function injectIntoGlobalsCss(cssPath, newVarsCss) {
-  if (!fs.existsSync(cssPath)) {
-    throw new Error(`Cannot find globals.css at ${cssPath}`);
-  }
-  const startMarker = '/* AUTO-GENERATED COLORS START */';
-  const endMarker = '/* AUTO-GENERATED COLORS END */';
-  let content = fs.readFileSync(cssPath, 'utf8');
+function buildGlobalsCss({ rootVarsCss, darkVarsCss }) {
+  return `@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  // Ensure @theme inline block exists
-  const themeStartIdx = content.indexOf('@theme inline');
-  if (themeStartIdx === -1) {
-    // Insert a minimal @theme inline block after :root block or at end of file
-    const rootEndMatch = content.match(/\:root\s*\{[\s\S]*?\}\s*/);
-    const insertIdx = rootEndMatch ? content.indexOf(rootEndMatch[0]) + rootEndMatch[0].length : content.length;
-    const block = `\n@theme inline {\n${startMarker}\n${newVarsCss}\n${endMarker}\n}\n`;
-    content = content.slice(0, insertIdx) + block + content.slice(insertIdx);
-    fs.writeFileSync(cssPath, content, 'utf8');
-    return;
-  }
-
-  // Find the braces of @theme inline block
-  const braceOpenIdx = content.indexOf('{', themeStartIdx);
-  if (braceOpenIdx === -1) {
-    throw new Error('Malformed @theme inline block: missing opening brace');
-  }
-  let depth = 1;
-  let i = braceOpenIdx + 1;
-  while (i < content.length && depth > 0) {
-    const ch = content[i];
-    if (ch === '{') depth++;
-    else if (ch === '}') depth--;
-    i++;
-  }
-  if (depth !== 0) {
-    throw new Error('Malformed @theme inline block: missing closing brace');
-  }
-  const themeBlockEndIdx = i - 1;
-
-  const before = content.slice(0, braceOpenIdx + 1);
-  const inside = content.slice(braceOpenIdx + 1, themeBlockEndIdx);
-  const after = content.slice(themeBlockEndIdx);
-
-  const startIdx = inside.indexOf(startMarker);
-  const endIdx = inside.indexOf(endMarker);
-
-  let newInside;
-  if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
-    const beforeMarkers = inside.slice(0, startIdx).replace(/\n+$/, '');
-    const afterMarkers = inside.slice(endIdx + endMarker.length).replace(/^\n+/, '');
-    const replacement = `\n${startMarker}\n${newVarsCss}\n${endMarker}`;
-    newInside = beforeMarkers + replacement + (afterMarkers ? '\n' + afterMarkers : '');
-  } else {
-    const insertion = `${startMarker}\n${newVarsCss}\n${endMarker}`;
-    const cleanedInside = inside.replace(/^\n+/, '');
-    newInside = insertion + (cleanedInside ? '\n' + cleanedInside : '');
-  }
-
-  const newContent = before + newInside + after;
-  fs.writeFileSync(cssPath, newContent, 'utf8');
+html {
+  font-size: 14px !important;
 }
 
-async function main() {
-  const colors = await readTailwindConfigColors();
-  const vars = flattenColorsToCssVars('', colors);
-  const css = generateCssVarsBlock(vars);
-  injectIntoGlobalsCss(globalsCssPath, css);
+body {
+  font-family: var(--font-spoqa-han-sans), sans-serif;
+}
+
+body #custom-gradient {
+  background: linear-gradient(to top, var(--gradient-bg-from) 80%, var(--gradient-bg-to));
+}
+
+body #custom-inner-gradient {
+  background: linear-gradient(180deg, var(--inner-gradient-bg-from) 0%, var(--inner-gradient-bg-center) 70%, var(--inner-gradient-bg-to) 100%);
+}
+
+body .cm-editor {
+  font-family: var(--font-spoqa-han-sans), sans-serif;
+  background-color: transparent;
+}
+
+body .cm-focused {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body span.token {
+  color: rgb(var(--support-default-info));
+  font-weight: 400;
+}
+
+body span.token.string {
+  color: rgb(var(--support-default-success));
+}
+
+body span.token.number {
+  color: rgb(var(--support-default-caution));
+}
+
+body span.token.boolean {
+  color: rgb(var(--support-default-caution));
+}
+
+body span.token.comment {
+  color: rgb(var(--grays-gray3));
+}
+
+body span.token.punctuation {
+  color: rgb(var(--texts-secondary));
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+  height: 0.45rem;
+  transition: all 0.35 ease;
+  -webkit-transition: all 0.35 ease;
+  -moz-transition: all 0.35 ease;
+  -ms-transition: all 0.35 ease;
+  -o-transition: all 0.35 ease;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--grays-gray5));
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--grays-gray4));
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+@layer base {
+  :root {
+${rootVarsCss}
+  }
+  .dark {
+${darkVarsCss}
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background-primary text-foreground;
+  }
+}
+`;
+}
+
+function main() {
+  const globalTokens = readJsonSafe(globalTokensPath);
+  const darkTokens = readJsonSafe(darkTokensPath);
+
+  const rootVars = flattenTokensToCssVars(globalTokens);
+  const darkVars = Object.keys(darkTokens).length ? flattenTokensToCssVars(darkTokens) : {};
+
+  const rootVarsCss = buildVarsBlock(rootVars);
+  const darkVarsCss = buildVarsBlock(darkVars);
+
+  const css = buildGlobalsCss({ rootVarsCss, darkVarsCss });
+  fs.writeFileSync(globalsCssPath, css, 'utf8');
   // eslint-disable-next-line no-console
-  console.log(`Injected ${Object.keys(vars).length} color variables into app/globals.css`);
+  console.log(`Generated app/globals.css using ${Object.keys(rootVars).length} :root vars and ${Object.keys(darkVars).length} dark vars from tokens.`);
 }
 
 main();

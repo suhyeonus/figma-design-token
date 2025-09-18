@@ -24,7 +24,7 @@ async function writeJsonFile(filePath, data) {
 
 async function splitTokens() {
   const projectRoot = path.resolve(process.cwd());
-  const inputFilePath = path.join(projectRoot, 'tokens', 'design-token.json');
+  const inputFilePath = path.join(projectRoot, 'tokens', 'tokens.json');
   const outputDir = path.join(projectRoot, 'tokens', 'flatten');
 
   const json = await readJsonFile(inputFilePath);

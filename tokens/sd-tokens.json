@@ -4,7 +4,7 @@
       "key": "{dimension.scale}",
       "$type": "dimension",
       "$value": "2px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "dimension",
@@ -25,7 +25,7 @@
       "key": "{dimension.xs}",
       "$type": "dimension",
       "$value": "4px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "dimension",
@@ -46,7 +46,7 @@
       "key": "{dimension.sm}",
       "$type": "dimension",
       "$value": "8px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "dimension",
@@ -67,7 +67,7 @@
       "key": "{dimension.md}",
       "$type": "dimension",
       "$value": "16px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "dimension",
@@ -88,7 +88,7 @@
       "key": "{dimension.lg}",
       "$type": "dimension",
       "$value": "32px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "dimension",
@@ -109,7 +109,7 @@
       "key": "{dimension.xl}",
       "$type": "dimension",
       "$value": "64px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "dimension",
@@ -132,7 +132,7 @@
       "key": "{spacing.xs}",
       "$type": "dimension",
       "$value": "4px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -163,7 +163,7 @@
       "key": "{spacing.sm}",
       "$type": "dimension",
       "$value": "8px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -194,7 +194,7 @@
       "key": "{spacing.md}",
       "$type": "dimension",
       "$value": "16px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -225,7 +225,7 @@
       "key": "{spacing.lg}",
       "$type": "dimension",
       "$value": "32px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -256,7 +256,7 @@
       "key": "{spacing.xl}",
       "$type": "dimension",
       "$value": "64px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -288,7 +288,7 @@
       "$type": "dimension",
       "$value": "8px 64px",
       "$description": "You can have multiple values in a single spacing token. Read more on these: https://docs.tokens.studio/available-tokens/spacing-tokens#multi-value-spacing-tokens",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -322,7 +322,7 @@
       "key": "{borderRadius.sm}",
       "$type": "dimension",
       "$value": "4px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -353,7 +353,7 @@
       "key": "{borderRadius.lg}",
       "$type": "dimension",
       "$value": "8px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -384,7 +384,7 @@
       "key": "{borderRadius.xl}",
       "$type": "dimension",
       "$value": "16px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -416,7 +416,7 @@
       "$type": "dimension",
       "$value": "4px 8px",
       "$description": "You can have multiple values in a single radius token. Read more on these: https://docs.tokens.studio/available-tokens/border-radius-tokens#single--multiple-values",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -450,7 +450,7 @@
       "key": "{colors.black}",
       "$type": "color",
       "$value": "#000000",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "color",
@@ -471,7 +471,7 @@
       "key": "{colors.white}",
       "$type": "color",
       "$value": "#ffffff",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "color",
@@ -493,7 +493,7 @@
         "key": "{colors.gray.100}",
         "$type": "color",
         "$value": "#f7fafc",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -516,7 +516,7 @@
         "key": "{colors.gray.200}",
         "$type": "color",
         "$value": "#edf2f7",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -539,7 +539,7 @@
         "key": "{colors.gray.300}",
         "$type": "color",
         "$value": "#e2e8f0",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -562,7 +562,7 @@
         "key": "{colors.gray.400}",
         "$type": "color",
         "$value": "#cbd5e0",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -585,7 +585,7 @@
         "key": "{colors.gray.500}",
         "$type": "color",
         "$value": "#a0aec0",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -608,7 +608,7 @@
         "key": "{colors.gray.600}",
         "$type": "color",
         "$value": "#718096",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -631,7 +631,7 @@
         "key": "{colors.gray.700}",
         "$type": "color",
         "$value": "#4a5568",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -654,7 +654,7 @@
         "key": "{colors.gray.800}",
         "$type": "color",
         "$value": "#2d3748",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -677,7 +677,7 @@
         "key": "{colors.gray.900}",
         "$type": "color",
         "$value": "#1a202c",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -702,7 +702,7 @@
         "key": "{colors.red.100}",
         "$type": "color",
         "$value": "#fff5f5",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -725,7 +725,7 @@
         "key": "{colors.red.200}",
         "$type": "color",
         "$value": "#fed7d7",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -748,7 +748,7 @@
         "key": "{colors.red.300}",
         "$type": "color",
         "$value": "#feb2b2",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -771,7 +771,7 @@
         "key": "{colors.red.400}",
         "$type": "color",
         "$value": "#fc8181",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -794,7 +794,7 @@
         "key": "{colors.red.500}",
         "$type": "color",
         "$value": "#f56565",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -817,7 +817,7 @@
         "key": "{colors.red.600}",
         "$type": "color",
         "$value": "#e53e3e",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -840,7 +840,7 @@
         "key": "{colors.red.700}",
         "$type": "color",
         "$value": "#c53030",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -863,7 +863,7 @@
         "key": "{colors.red.800}",
         "$type": "color",
         "$value": "#9b2c2c",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -886,7 +886,7 @@
         "key": "{colors.red.900}",
         "$type": "color",
         "$value": "#742a2a",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -911,7 +911,7 @@
         "key": "{colors.orange.100}",
         "$type": "color",
         "$value": "#fffaf0",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -934,7 +934,7 @@
         "key": "{colors.orange.200}",
         "$type": "color",
         "$value": "#feebc8",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -957,7 +957,7 @@
         "key": "{colors.orange.300}",
         "$type": "color",
         "$value": "#fbd38d",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -980,7 +980,7 @@
         "key": "{colors.orange.400}",
         "$type": "color",
         "$value": "#f6ad55",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1003,7 +1003,7 @@
         "key": "{colors.orange.500}",
         "$type": "color",
         "$value": "#ed8936",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1026,7 +1026,7 @@
         "key": "{colors.orange.600}",
         "$type": "color",
         "$value": "#dd6b20",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1049,7 +1049,7 @@
         "key": "{colors.orange.700}",
         "$type": "color",
         "$value": "#c05621",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1072,7 +1072,7 @@
         "key": "{colors.orange.800}",
         "$type": "color",
         "$value": "#9c4221",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1095,7 +1095,7 @@
         "key": "{colors.orange.900}",
         "$type": "color",
         "$value": "#7b341e",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1120,7 +1120,7 @@
         "key": "{colors.yellow.100}",
         "$type": "color",
         "$value": "#fffff0",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1143,7 +1143,7 @@
         "key": "{colors.yellow.200}",
         "$type": "color",
         "$value": "#fefcbf",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1166,7 +1166,7 @@
         "key": "{colors.yellow.300}",
         "$type": "color",
         "$value": "#faf089",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1189,7 +1189,7 @@
         "key": "{colors.yellow.400}",
         "$type": "color",
         "$value": "#f6e05e",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1212,7 +1212,7 @@
         "key": "{colors.yellow.500}",
         "$type": "color",
         "$value": "#ecc94b",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1235,7 +1235,7 @@
         "key": "{colors.yellow.600}",
         "$type": "color",
         "$value": "#d69e2e",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1258,7 +1258,7 @@
         "key": "{colors.yellow.700}",
         "$type": "color",
         "$value": "#b7791f",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1281,7 +1281,7 @@
         "key": "{colors.yellow.800}",
         "$type": "color",
         "$value": "#975a16",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1304,7 +1304,7 @@
         "key": "{colors.yellow.900}",
         "$type": "color",
         "$value": "#744210",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1329,7 +1329,7 @@
         "key": "{colors.green.100}",
         "$type": "color",
         "$value": "#f0fff4",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1352,7 +1352,7 @@
         "key": "{colors.green.200}",
         "$type": "color",
         "$value": "#c6f6d5",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1375,7 +1375,7 @@
         "key": "{colors.green.300}",
         "$type": "color",
         "$value": "#9ae6b4",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1398,7 +1398,7 @@
         "key": "{colors.green.400}",
         "$type": "color",
         "$value": "#68d391",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1421,7 +1421,7 @@
         "key": "{colors.green.500}",
         "$type": "color",
         "$value": "#48bb78",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1444,7 +1444,7 @@
         "key": "{colors.green.600}",
         "$type": "color",
         "$value": "#38a169",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1467,7 +1467,7 @@
         "key": "{colors.green.700}",
         "$type": "color",
         "$value": "#2f855a",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1490,7 +1490,7 @@
         "key": "{colors.green.800}",
         "$type": "color",
         "$value": "#276749",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1513,7 +1513,7 @@
         "key": "{colors.green.900}",
         "$type": "color",
         "$value": "#22543d",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1538,7 +1538,7 @@
         "key": "{colors.teal.100}",
         "$type": "color",
         "$value": "#e6fffa",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1561,7 +1561,7 @@
         "key": "{colors.teal.200}",
         "$type": "color",
         "$value": "#b2f5ea",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1584,7 +1584,7 @@
         "key": "{colors.teal.300}",
         "$type": "color",
         "$value": "#81e6d9",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1607,7 +1607,7 @@
         "key": "{colors.teal.400}",
         "$type": "color",
         "$value": "#4fd1c5",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1630,7 +1630,7 @@
         "key": "{colors.teal.500}",
         "$type": "color",
         "$value": "#38b2ac",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1653,7 +1653,7 @@
         "key": "{colors.teal.600}",
         "$type": "color",
         "$value": "#319795",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1676,7 +1676,7 @@
         "key": "{colors.teal.700}",
         "$type": "color",
         "$value": "#2c7a7b",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1699,7 +1699,7 @@
         "key": "{colors.teal.800}",
         "$type": "color",
         "$value": "#285e61",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1722,7 +1722,7 @@
         "key": "{colors.teal.900}",
         "$type": "color",
         "$value": "#234e52",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1747,7 +1747,7 @@
         "key": "{colors.blue.100}",
         "$type": "color",
         "$value": "#ebf8ff",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1770,7 +1770,7 @@
         "key": "{colors.blue.200}",
         "$type": "color",
         "$value": "#bee3f8",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1793,7 +1793,7 @@
         "key": "{colors.blue.300}",
         "$type": "color",
         "$value": "#90cdf4",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1816,7 +1816,7 @@
         "key": "{colors.blue.400}",
         "$type": "color",
         "$value": "#63b3ed",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1839,7 +1839,7 @@
         "key": "{colors.blue.500}",
         "$type": "color",
         "$value": "#4299e1",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1862,7 +1862,7 @@
         "key": "{colors.blue.600}",
         "$type": "color",
         "$value": "#3182ce",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1885,7 +1885,7 @@
         "key": "{colors.blue.700}",
         "$type": "color",
         "$value": "#2b6cb0",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1908,7 +1908,7 @@
         "key": "{colors.blue.800}",
         "$type": "color",
         "$value": "#2c5282",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1931,7 +1931,7 @@
         "key": "{colors.blue.900}",
         "$type": "color",
         "$value": "#2a4365",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1956,7 +1956,7 @@
         "key": "{colors.indigo.100}",
         "$type": "color",
         "$value": "#ebf4ff",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -1979,7 +1979,7 @@
         "key": "{colors.indigo.200}",
         "$type": "color",
         "$value": "#c3dafe",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2002,7 +2002,7 @@
         "key": "{colors.indigo.300}",
         "$type": "color",
         "$value": "#a3bffa",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2025,7 +2025,7 @@
         "key": "{colors.indigo.400}",
         "$type": "color",
         "$value": "#7f9cf5",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2048,7 +2048,7 @@
         "key": "{colors.indigo.500}",
         "$type": "color",
         "$value": "#667eea",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2071,7 +2071,7 @@
         "key": "{colors.indigo.600}",
         "$type": "color",
         "$value": "#5a67d8",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2094,7 +2094,7 @@
         "key": "{colors.indigo.700}",
         "$type": "color",
         "$value": "#4c51bf",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2117,7 +2117,7 @@
         "key": "{colors.indigo.800}",
         "$type": "color",
         "$value": "#434190",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2140,7 +2140,7 @@
         "key": "{colors.indigo.900}",
         "$type": "color",
         "$value": "#3c366b",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2165,7 +2165,7 @@
         "key": "{colors.purple.100}",
         "$type": "color",
         "$value": "#faf5ff",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2188,7 +2188,7 @@
         "key": "{colors.purple.200}",
         "$type": "color",
         "$value": "#e9d8fd",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2211,7 +2211,7 @@
         "key": "{colors.purple.300}",
         "$type": "color",
         "$value": "#d6bcfa",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2234,7 +2234,7 @@
         "key": "{colors.purple.400}",
         "$type": "color",
         "$value": "#b794f4",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2257,7 +2257,7 @@
         "key": "{colors.purple.500}",
         "$type": "color",
         "$value": "#9f7aea",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2280,7 +2280,7 @@
         "key": "{colors.purple.600}",
         "$type": "color",
         "$value": "#805ad5",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2303,7 +2303,7 @@
         "key": "{colors.purple.700}",
         "$type": "color",
         "$value": "#6b46c1",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2326,7 +2326,7 @@
         "key": "{colors.purple.800}",
         "$type": "color",
         "$value": "#553c9a",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2349,7 +2349,7 @@
         "key": "{colors.purple.900}",
         "$type": "color",
         "$value": "#44337a",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2374,7 +2374,7 @@
         "key": "{colors.pink.100}",
         "$type": "color",
         "$value": "#fff5f7",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2397,7 +2397,7 @@
         "key": "{colors.pink.200}",
         "$type": "color",
         "$value": "#fed7e2",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2420,7 +2420,7 @@
         "key": "{colors.pink.300}",
         "$type": "color",
         "$value": "#fbb6ce",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2443,7 +2443,7 @@
         "key": "{colors.pink.400}",
         "$type": "color",
         "$value": "#f687b3",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2466,7 +2466,7 @@
         "key": "{colors.pink.500}",
         "$type": "color",
         "$value": "#ed64a6",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2489,7 +2489,7 @@
         "key": "{colors.pink.600}",
         "$type": "color",
         "$value": "#d53f8c",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2512,7 +2512,7 @@
         "key": "{colors.pink.700}",
         "$type": "color",
         "$value": "#b83280",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2535,7 +2535,7 @@
         "key": "{colors.pink.800}",
         "$type": "color",
         "$value": "#97266d",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2558,7 +2558,7 @@
         "key": "{colors.pink.900}",
         "$type": "color",
         "$value": "#702459",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2583,7 +2583,7 @@
         "key": "{colors.test.1}",
         "$type": "color",
         "$value": "#fae8ff",
-        "filePath": "tokens/flatten/global-token.json",
+        "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
           "$type": "color",
@@ -2609,7 +2609,7 @@
       "key": "{opacity.low}",
       "$type": "opacity",
       "$value": 0.1,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "opacity",
@@ -2630,7 +2630,7 @@
       "key": "{opacity.md}",
       "$type": "opacity",
       "$value": 0.5,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "opacity",
@@ -2651,7 +2651,7 @@
       "key": "{opacity.high}",
       "$type": "opacity",
       "$value": 0.9,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "original": {
         "$type": "opacity",
@@ -2674,7 +2674,7 @@
       "key": "{fontFamilies.heading}",
       "$type": "fontFamily",
       "$value": "Inter",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2705,7 +2705,7 @@
       "key": "{fontFamilies.body}",
       "$type": "fontFamily",
       "$value": "Roboto",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2738,7 +2738,7 @@
       "key": "{lineHeights.heading}",
       "$type": "lineHeight",
       "$value": 1.1,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2769,7 +2769,7 @@
       "key": "{lineHeights.body}",
       "$type": "lineHeight",
       "$value": 1.4,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2802,7 +2802,7 @@
       "key": "{letterSpacing.default}",
       "$type": "dimension",
       "$value": "0",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2833,7 +2833,7 @@
       "key": "{letterSpacing.increased}",
       "$type": "dimension",
       "$value": "1.5em",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2864,7 +2864,7 @@
       "key": "{letterSpacing.decreased}",
       "$type": "dimension",
       "$value": "-0.05em",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2897,7 +2897,7 @@
       "key": "{paragraphSpacing.h1}",
       "$type": "dimension",
       "$value": "32px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2928,7 +2928,7 @@
       "key": "{paragraphSpacing.h2}",
       "$type": "dimension",
       "$value": "26px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2961,7 +2961,7 @@
       "key": "{fontWeights.headingRegular}",
       "$type": "fontWeight",
       "$value": 400,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -2992,7 +2992,7 @@
       "key": "{fontWeights.headingBold}",
       "$type": "fontWeight",
       "$value": 700,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3023,7 +3023,7 @@
       "key": "{fontWeights.bodyRegular}",
       "$type": "fontWeight",
       "$value": 400,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3054,7 +3054,7 @@
       "key": "{fontWeights.bodyBold}",
       "$type": "fontWeight",
       "$value": 700,
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3087,7 +3087,7 @@
       "key": "{fontSizes.h1}",
       "$type": "fontSize",
       "$value": "49px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3118,7 +3118,7 @@
       "key": "{fontSizes.h2}",
       "$type": "fontSize",
       "$value": "39px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3149,7 +3149,7 @@
       "key": "{fontSizes.h3}",
       "$type": "fontSize",
       "$value": "31px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3180,7 +3180,7 @@
       "key": "{fontSizes.h4}",
       "$type": "fontSize",
       "$value": "25px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3211,7 +3211,7 @@
       "key": "{fontSizes.h5}",
       "$type": "fontSize",
       "$value": "20px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3242,7 +3242,7 @@
       "key": "{fontSizes.h6}",
       "$type": "fontSize",
       "$value": "16px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3273,7 +3273,7 @@
       "key": "{fontSizes.body}",
       "$type": "fontSize",
       "$value": "16px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3304,7 +3304,7 @@
       "key": "{fontSizes.sm}",
       "$type": "fontSize",
       "$value": "13.6px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {
@@ -3335,7 +3335,7 @@
       "key": "{fontSizes.xs}",
       "$type": "fontSize",
       "$value": "10.4px",
-      "filePath": "tokens/flatten/global-token.json",
+      "filePath": "tokens/transformed/global-tokens.json",
       "isSource": true,
       "$extensions": {
         "studio.tokens": {

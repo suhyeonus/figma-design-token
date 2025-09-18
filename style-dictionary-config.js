@@ -4,7 +4,7 @@ import StyleDictionary from 'style-dictionary';
 register(StyleDictionary);
 
 const sd = new StyleDictionary({
-  source: ['./tokens/flatten/global-token.json'], 
+  source: ['./tokens/transformed/global-tokens.json'], 
   preprocessors: ['tokens-studio'],
   platforms: {
     css: {

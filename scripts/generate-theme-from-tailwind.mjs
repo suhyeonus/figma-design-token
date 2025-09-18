@@ -6,33 +6,41 @@ import { pathToFileURL } from 'node:url';
 import os from 'node:os';
 
 const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const tailwindConfigPath = path.resolve(projectRoot, 'tailwind.config.js');
+const tailwindConfigPath = path.resolve(projectRoot, 'tailwind.config.ts');
 const globalsCssPath = path.resolve(projectRoot, 'app', 'globals.css');
 
 async function readTailwindConfigColors() {
   if (!fs.existsSync(tailwindConfigPath)) {
-    throw new Error(`Cannot find tailwind.config.js at ${tailwindConfigPath}`);
+    throw new Error(`Cannot find tailwind.config.ts at ${tailwindConfigPath}`);
   }
+  
   let config;
-  // Try ESM import first (because project has type: module)
   try {
-    const url = pathToFileURL(tailwindConfigPath).href + `?t=${Date.now()}`;
-    const mod = await import(url);
-    config = mod?.default ?? mod;
-  } catch (e) {
-    // Fallback: copy to a temporary .cjs file and require it as CommonJS
     const source = fs.readFileSync(tailwindConfigPath, 'utf8');
+    
+    const jsSource = source
+      .replace(/\/\*\* @type \{import\('tailwindcss'\)\.Config\} \*\//g, '')
+      .replace(/import type { Config } from 'tailwindcss';/g, '')
+      .replace(/const config: Config = {/g, 'const config = {')
+      .replace(/export default config;/g, 'module.exports = config;');
+      
     const tempPath = path.join(os.tmpdir(), `tailwind.config.${Date.now()}.cjs`);
-    fs.writeFileSync(tempPath, source, 'utf8');
+    fs.writeFileSync(tempPath, jsSource, 'utf8');
+    
     try {
       const require = createRequire(import.meta.url);
       config = require(tempPath);
     } finally {
       try { fs.unlinkSync(tempPath); } catch {}
     }
+  } catch (e) {
+    console.error('Error reading tailwind config:', e.message);
+    throw new Error(`Failed to read tailwind.config.ts: ${e.message}`);
   }
+  
   const colors = config?.theme?.extend?.colors;
   if (!colors || typeof colors !== 'object') {
+    console.warn('No colors found in tailwind config theme.extend.colors');
     return {};
   }
   return colors;

@@ -1895,12 +1895,12 @@
       },
       "500": {
         "key": "{colors.blue.500}",
-        "value": "#d815c1",
+        "value": "#4299e1",
         "type": "color",
         "filePath": "tokens/transformed/global-tokens.json",
         "isSource": true,
         "original": {
-          "value": "#d815c1",
+          "value": "#4299e1",
           "type": "color",
           "key": "{colors.blue.500}"
         },

@@ -8,7 +8,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "tokens:split": "node ./scripts/split-tokens.mjs",
+    "tokens:transform": "node ./scripts/transform-tokens.mjs",
     "build:tokens:tailwind": "node sd-tokens-config.js && node tw-tokens-config.js",
     "theme:generate": "node ./scripts/generate-theme-from-tailwind.mjs"
   },

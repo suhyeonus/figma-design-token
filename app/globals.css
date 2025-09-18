@@ -6,17 +6,6 @@
 }
 
 @theme inline {
-
-
-
-
-
-
-
-
-
-
-
 /* AUTO-GENERATED COLORS START */
   --color-black: #000000;
   --color-blue-100: #ebf8ff;
@@ -112,18 +101,6 @@
   --color-yellow-800: #975a16;
   --color-yellow-900: #744210;
 /* AUTO-GENERATED COLORS END */
-
-
-
-
-
-
-
-
-
-
-
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

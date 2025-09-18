@@ -116,15 +116,14 @@ function injectIntoGlobalsCss(cssPath, newVarsCss) {
 
   let newInside;
   if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
-    // Replace existing block
-    const beforeMarkers = inside.slice(0, startIdx);
-    const afterMarkers = inside.slice(endIdx + endMarker.length);
-    const replacement = `\n${startMarker}\n${newVarsCss}\n${endMarker}\n`;
-    newInside = beforeMarkers + replacement + afterMarkers;
+    const beforeMarkers = inside.slice(0, startIdx).replace(/\n+$/, '');
+    const afterMarkers = inside.slice(endIdx + endMarker.length).replace(/^\n+/, '');
+    const replacement = `\n${startMarker}\n${newVarsCss}\n${endMarker}`;
+    newInside = beforeMarkers + replacement + (afterMarkers ? '\n' + afterMarkers : '');
   } else {
-    // Insert new block at the top of the @theme inline content
-    const insertion = `\n${startMarker}\n${newVarsCss}\n${endMarker}\n`;
-    newInside = insertion + inside;
+    const insertion = `${startMarker}\n${newVarsCss}\n${endMarker}`;
+    const cleanedInside = inside.replace(/^\n+/, '');
+    newInside = insertion + (cleanedInside ? '\n' + cleanedInside : '');
   }
 
   const newContent = before + newInside + after;

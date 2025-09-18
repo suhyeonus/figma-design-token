@@ -10,7 +10,8 @@
     "lint": "eslint",
     "tokens:transform": "node ./scripts/transform-tokens.mjs",
     "build:tokens:tailwind": "node style-dictionary-config.js && node tailwind-tokens-config.js",
-    "theme:generate": "node ./scripts/generate-theme-from-tailwind.mjs"
+    "theme:generate": "node ./scripts/generate-theme-from-tailwind.mjs",
+    "token:update": "yarn tokens:transform && yarn build:tokens:tailwind && yarn theme:generate"
   },
   "dependencies": {
     "next": "15.5.3",
